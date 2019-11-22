@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "420052974322",
+    "firebase_url": "https://mobileproject-bffb4.firebaseio.com",
+    "project_id": "mobileproject-bffb4",
+    "storage_bucket": "mobileproject-bffb4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:420052974322:android:cbd48fec82c3afde7bee6b",
+        "android_client_info": {
+          "package_name": "com.hausung.hstuting"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "420052974322-7dvs3tjjldltf9nkqfk44fpqhe7vbnph.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hausung.hstuting",
+            "certificate_hash": "559d8cd7733cc8c12c664db71d7ef7d9bde72c5a"
+          }
+        },
+        {
+          "client_id": "420052974322-v1asconshapjjp45lpv63djfg38e82m6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmwCGrE1fIvLVJMBWcuj3f0bMzgN61E0Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "420052974322-v1asconshapjjp45lpv63djfg38e82m6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
