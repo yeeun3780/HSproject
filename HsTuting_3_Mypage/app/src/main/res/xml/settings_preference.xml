@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="내 정보 확인">
+        <PreferenceScreen
+            android:key="my_info"
+            android:title="내 정보">
+            <EditTextPreference
+                android:key = "custom_info"
+                android:selectAllOnFocus="true"
+                android:singleLine="false"
+                android:summary="유예은"
+                android:title="이름"
+                />
+            <EditTextPreference
+                android:key="custom_info_num"
+                android:selectAllOnFocus="true"
+                android:singleLine="false"
+                android:summary="1771163"
+                android:title="학번"
+                />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="튜터링 활동 설정">
+        <ListPreference
+            android:entries="@array/array_ranking"
+            android:entryValues="@array/array_ranking"
+            android:key="ranking_list"
+            android:summary="매우 낮음"
+            android:title="튜터링 활동 수준"
+            />
+        <EditTextPreference
+            android:key="time_setting"
+            android:selectAllOnFocus="true"
+            android:singleLine="false"
+            android:summary="참여 가능한 날짜 작성"
+            android:title="참여 가능 시간" />
+
+    </PreferenceCategory>
+</PreferenceScreen>
