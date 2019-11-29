@@ -32,7 +32,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:text="회원가입" />
+            android:text="회원가입"
+            android:textColor="@color/white"
+            android:background="@drawable/border"/>
     </LinearLayout>
 
     <LinearLayout
@@ -46,6 +48,8 @@
             android:id="@+id/login"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Login" />
+            android:text="Login"
+            android:textColor="@color/white"
+            android:background="@drawable/border"/>
     </LinearLayout>
 </LinearLayout>

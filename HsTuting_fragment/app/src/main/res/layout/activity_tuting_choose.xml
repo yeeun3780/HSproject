@@ -14,12 +14,18 @@
             android:id="@+id/hansung_tuting"
             android:layout_width="match_parent"
             android:layout_height="74dp"
-            android:text="한성 튜터링" />
+            android:text="한성 튜터링"
+            android:textColor="@color/white"
+            android:background="@drawable/border"
+            android:textSize="35dp"/>
         <Button
             android:id="@+id/department_tuting"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_marginTop="50dp"
-            android:text="학과 튜터링" />
+            android:text="학과 튜터링"
+            android:textColor="@color/white"
+            android:background="@drawable/border"
+            android:textSize="35dp"/>
     </LinearLayout>
 </LinearLayout>

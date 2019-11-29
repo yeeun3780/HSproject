@@ -10,30 +10,70 @@
         android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="3">
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/chattingRoom"
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ImageView
+                android:id="@+id/chattingRoom"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@drawable/list"
+                android:text="채팅방" />
+
+            <ImageView
+                android:id="@+id/createChatting"
+                android:layout_width="121dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@drawable/chat"
+                android:text="채팅방 개설" />
+
+            <ImageView
+                android:id="@+id/profile"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@drawable/mypage"
+                android:text="개인정보" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/middleLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="채팅방" />
+            android:orientation="horizontal"
+            android:weightSum="3">
 
-        <Button
-            android:id="@+id/createChatting"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="채팅방 개설"
-            android:layout_weight="1"/>
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="213dp"
+                android:layout_height="10dp"
+                android:layout_weight="1" />
 
-        <Button
-            android:id="@+id/profile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="213dp"
+                android:layout_height="10dp"
+                android:layout_weight="1" />
 
-            android:text="개인정보"
-            android:layout_weight="1"/>
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="213dp"
+                android:layout_height="10dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
@@ -41,7 +81,6 @@
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/layout">
-    </FrameLayout>
+        android:layout_below="@id/layout"></FrameLayout>
 
 </RelativeLayout>

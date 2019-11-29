@@ -1,10 +1,12 @@
 package com.hausung.hstuting;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,11 +29,20 @@ public class HansungTutingActivity extends AppCompatActivity {
         fragment2=new ChatRoomActivity();
         fragment3=new MypageActivity();
 
-        Button button1 = findViewById(R.id.chattingRoom);
+        ImageView button1 = findViewById(R.id.chattingRoom);
+        ImageView  button2 = findViewById(R.id.createChatting);
+        ImageView button3 = findViewById(R.id.profile);
+
+        Button belowButton1=findViewById(R.id.button1);
+        Button belowButton2=findViewById(R.id.button2);
+        Button belowButton3=findViewById(R.id.button3);
+
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                belowButton1.setBackgroundColor(Color.parseColor("#87cefa"));
+                belowButton2.setBackgroundColor(Color.parseColor("#ffffff"));
+                belowButton3.setBackgroundColor(Color.parseColor("#ffffff"));
                 //프래그먼트 추가하거나 할떄는 여러개 명령을 한꺼번에 쓸 수 있으므로
                 //beginTransaction을 사용함
                 //fragment1를 R.id.container에 넣어달라(add 또는 replace, replace는 기존에있던걸 대체해줌)
@@ -42,11 +53,12 @@ public class HansungTutingActivity extends AppCompatActivity {
             }
         });
 
-        Button button2 = findViewById(R.id.createChatting);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                belowButton1.setBackgroundColor(Color.parseColor("#ffffff"));
+                belowButton2.setBackgroundColor(Color.parseColor("#87cefa"));
+                belowButton3.setBackgroundColor(Color.parseColor("#ffffff"));
                 //프래그먼트 추가하거나 할떄는 여러개 명령을 한꺼번에 쓸 수 있으므로
                 //beginTransaction을 사용함
                 //fragment1를 R.id.container에 넣어달라(add 또는 replace, replace는 기존에있던걸 대체해줌)
@@ -57,11 +69,12 @@ public class HansungTutingActivity extends AppCompatActivity {
             }
         });
 
-        Button button3 = findViewById(R.id.profile);
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                belowButton1.setBackgroundColor(Color.parseColor("#ffffff"));
+                belowButton2.setBackgroundColor(Color.parseColor("#ffffff"));
+                belowButton3.setBackgroundColor(Color.parseColor("#87cefa"));
                 //프래그먼트 추가하거나 할떄는 여러개 명령을 한꺼번에 쓸 수 있으므로
                 //beginTransaction을 사용함
                 //fragment1를 R.id.container에 넣어달라(add 또는 replace, replace는 기존에있던걸 대체해줌)

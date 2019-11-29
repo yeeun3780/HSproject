@@ -38,5 +38,8 @@
         android:id="@+id/register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="채팅방 개설" />
+        android:text="채팅방 개설"
+        android:textColor="@color/white"
+        android:background="@drawable/border"
+        android:textSize="20dp"/>
 </LinearLayout>
