@@ -58,14 +58,14 @@ public class ChatRoomActivity extends Fragment {
                 });
 
         //버튼 클릭시 입력 정보 받아와 데이터베이스에 저장
-        v.findViewById(R.id.register).setOnClickListener(
+        rootView.findViewById(R.id.register).setOnClickListener(
                 v1 -> {
                     //컬렉션 가져오기
-                    subject= v1.findViewById(R.id.subject);
-                    eachClass= v1.findViewById(R.id.eachClass);
-                    date= v1.findViewById(R.id.date);
-                    time= v1.findViewById(R.id.time);
-                    tutor= v1.findViewById(R.id.tutor);
+                    subject= rootView.findViewById(R.id.subject);
+                    eachClass= rootView.findViewById(R.id.eachClass);
+                    date= rootView.findViewById(R.id.date);
+                    time= rootView.findViewById(R.id.time);
+                    tutor= rootView.findViewById(R.id.tutor);
                     subjectString=subject.getText().toString();
                     eachClassString=eachClass.getText().toString();
                     dateString=date.getText().toString();
@@ -84,6 +84,7 @@ public class ChatRoomActivity extends Fragment {
                             .set(eachTutoring)
                             .addOnSuccessListener(aVoid -> Log.d("TAG", "DocumentSnapshot successfully written!"))
                             .addOnFailureListener(e -> Log.w("TAG", "Error writing document", e));
+                    Toast.makeText(getContext(), "튜터링방이 개설되었습니다.", Toast.LENGTH_LONG).show();
                 }
         );
         return rootView;
