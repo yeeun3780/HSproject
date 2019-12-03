@@ -78,7 +78,7 @@ public class ChattingListActivity extends Fragment {
                         for (QueryDocumentSnapshot doc : value) {
                             if (doc.get("subject") != null) {
                                 adapter.addItem(new ChattingItemActivity(doc.getString("subject"), doc.getString("eachClass"),
-                                        doc.getString("date"), doc.getString("time"), doc.getString("tutor")));
+                                        doc.getString("date"), doc.getString("time"), doc.getString("tutor"),doc.getString("outline")));
                             }
                         }
                         //어답터 갱신
@@ -96,65 +96,19 @@ public class ChattingListActivity extends Fragment {
             @Override
             public void onItemClick(ChattingItemAdapterActivity.ViewHolder holder, View view, int position) {
                 ChattingItemActivity item = adapter.getItem(position);
-                Toast.makeText(getActivity(), "해당 채팅방 선택됨 " + item.getsubject(), Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), "해당 채팅방 선택됨 " + item.getsubject()+" "+item.getEachClass(), Toast.LENGTH_LONG).show();
+                //상세 정보화면 intent 새로 만들고 클릭한 리사이클러뷰 데이터 정보 넘겨주기
+                Intent intent=new Intent(view.getContext(),ChattingListOutlineActivity.class);
+                intent.putExtra("subject",item.subject);
+                intent.putExtra("eachClass",item.eachClass);
+                intent.putExtra("date",item.date);
+                intent.putExtra("time",item.time);
+                intent.putExtra("tutor",item.tutor);
+                intent.putExtra("outline",item.outline);
+                startActivity(intent);
             }
         });
-
 
         return rootView;
     }
-
-    /*@Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chattinglist);
-        // 리사이클러뷰는 껍데기일뿐 어뎁터를 달아줘야된다.
-        recyclerView = (RecyclerView) findViewById(R.id.chattingList);
-        // 확장성을 위한 메소드, 일단 그냥 적음
-        recyclerView.setHasFixedSize(true);
-        //리니어 레이아웃 매니저 사용
-        layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
-
-        adapter = new ChattingItemAdapterActivity(getApplicationContext());
-
-        db.collection("chattingRoom")
-                .addSnapshotListener(new EventListener<QuerySnapshot>() {
-
-                    @Override
-                    public void onEvent(@Nullable QuerySnapshot value,
-                                        @Nullable FirebaseFirestoreException e) {
-
-                        if (e != null) {
-                            Log.w("TAG", "Listen failed.", e);
-                            return;
-                        }
-
-                        count = value.size();
-                        adapter.clear();//clear해줘야 중복 생성 안됨
-                        for (QueryDocumentSnapshot doc : value) {
-                            if (doc.get("subject") != null) {
-                                adapter.addItem(new ChattingItemActivity(doc.getString("subject"), doc.getString("eachClass"),
-                                        doc.getString("date"), doc.getString("time"), doc.getString("tutor")));
-                            }
-                        }
-                        //어답터 갱신
-                        adapter.notifyDataSetChanged();
-                    }
-                });
-
-        //어댑터에 연결
-        recyclerView.setAdapter(adapter);
-
-        //리스트뷰처럼 구현되어있지 않기 때문에
-        //어댑터 클래스에 직접 이벤트 처리 관련 코드 작성
-        //setOnItemClickListener라는 이름으로 이벤트 메소드 정의
-        adapter.setOnItemClickListener(new ChattingItemAdapterActivity.OnItemClickListener() {
-            @Override
-            public void onItemClick(ChattingItemAdapterActivity.ViewHolder holder, View view, int position) {
-                ChattingItemActivity item = adapter.getItem(position);
-                Toast.makeText(getApplicationContext(), "해당 채팅방 선택됨 " + item.getsubject(), Toast.LENGTH_LONG).show();
-            }
-        });
-    }*/
 }

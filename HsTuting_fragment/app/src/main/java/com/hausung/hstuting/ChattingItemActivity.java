@@ -7,13 +7,15 @@ public class ChattingItemActivity {
     String date;
     String time;
     String tutor;
+    String outline;
 
-    public ChattingItemActivity(String subject, String eachClass, String date, String time, String tutor) {
+    public ChattingItemActivity(String subject, String eachClass, String date, String time, String tutor,String outline) {
         this.subject = subject;
         this.eachClass = eachClass;
         this.date = date;
         this.time = time;
         this.tutor = tutor;
+        this.outline=outline;
     }
 
     public String getsubject() {
@@ -35,5 +37,7 @@ public class ChattingItemActivity {
     public String getTutor() {
         return tutor;
     }
+
+    public String getOutline() { return outline;}
 
 }

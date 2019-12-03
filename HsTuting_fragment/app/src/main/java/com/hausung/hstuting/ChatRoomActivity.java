@@ -34,11 +34,13 @@ public class ChatRoomActivity extends Fragment {
     private EditText date;
     private EditText time;
     private EditText tutor;
+    private EditText outline;
     private String subjectString;
     private String eachClassString;
     private String dateString;
     private String timeString;
     private String tutorString;
+    private String outlineString;
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     private int count;
     @Override
@@ -66,11 +68,13 @@ public class ChatRoomActivity extends Fragment {
                     date= rootView.findViewById(R.id.date);
                     time= rootView.findViewById(R.id.time);
                     tutor= rootView.findViewById(R.id.tutor);
+                    outline=rootView.findViewById(R.id.outline);
                     subjectString=subject.getText().toString();
                     eachClassString=eachClass.getText().toString();
                     dateString=date.getText().toString();
                     timeString=time.getText().toString();
                     tutorString=tutor.getText().toString();
+                    outlineString=outline.getText().toString();
                     //eachTutoring은 데이터베이스 문서에 값들을 넣어준다. 각각은 또 맵으로 구현해서 넣어줘야 한다
                     Map<String,String> eachTutoring=new HashMap<>();
                     eachTutoring.put("subject",subjectString);
@@ -78,6 +82,7 @@ public class ChatRoomActivity extends Fragment {
                     eachTutoring.put("date",dateString);
                     eachTutoring.put("time",timeString);
                     eachTutoring.put("tutor",tutorString);
+                    eachTutoring.put("outline",outlineString);
                     String newCount = String.format("%03d",count + 1);
                     //문서 newCount붙여서 새로 추가
                     db.collection("chattingRoom").document("tutoring"+ newCount)

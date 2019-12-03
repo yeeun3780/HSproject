@@ -34,6 +34,14 @@
         android:layout_height="wrap_content"
         android:hint="튜터이름" />
 
+    <EditText
+        android:id="@+id/outline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="하고싶은 말"
+        android:inputType="textPersonName" />
+
     <Button
         android:id="@+id/register"
         android:layout_width="match_parent"

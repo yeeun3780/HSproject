@@ -25,5 +25,6 @@
         <activity android:name=".ChattingListActivity">   </activity>
         <activity android:name=".ChatRoomActivity">   </activity>
         <activity android:name=".MypageActivity">   </activity>
+        <activity android:name=".ChattingListOutlineActivity"></activity>
     </application>
 </manifest>
