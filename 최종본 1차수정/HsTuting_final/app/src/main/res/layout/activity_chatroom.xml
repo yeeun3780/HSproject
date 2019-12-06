@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create a new Tutoring chatting room" />
+    <EditText
+        android:id="@+id/subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="과목명" />
+    <EditText
+        android:id="@+id/eachClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="분반" />
+    <EditText
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="요일" />
+    <EditText
+        android:id="@+id/time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="시간" />
+
+    <EditText
+        android:id="@+id/tutor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="튜터이름" />
+
+    <EditText
+        android:id="@+id/outline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="하고싶은 말"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="채팅방 개설"
+        android:textColor="@color/white"
+        android:background="@drawable/border"
+        android:textSize="20dp"/>
+</LinearLayout>
